@@ -2,7 +2,7 @@
   "name": "hls-react-sdk-example",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lab.videosdk.live/react-hls-demo/",
+  "homepage": "https://sanjubarker.github.io/video-chat",
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^1.0.6",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5"
   },
@@ -35,7 +36,9 @@
     "kill-start": "sudo kill -9 `sudo lsof -t -i:3000` && yarn start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
